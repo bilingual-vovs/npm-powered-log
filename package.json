@@ -1,0 +1,24 @@
+{
+  "name": "npm-powered-log",
+  "version": "1.2.2",
+  "description": "Make your log more useble and readble",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilingual-vovs/npm-powered-log.git"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "colors"
+  ],
+  "author": "bilingual-vovs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilingual-vovs/npm-powered-log/issues"
+  },
+  "homepage": "https://github.com/bilingual-vovs/npm-powered-log#readme"
+}
