@@ -1,3 +1,3 @@
 # npm-powered-log 
 
-> ### log
+### `log`
