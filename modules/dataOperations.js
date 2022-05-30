@@ -1,4 +1,5 @@
 const ParamTypes = require('./paramType')
+const colors = require('../assets/colors.json')
 
 const operations = {
     keysToLowerCase (object){
@@ -62,7 +63,7 @@ const operations = {
     toColorCode(color){
         let type = new ParamTypes(color)
         if (type.isColor){
-            return ("\x1b[" + colors[color]+"m")
+            return ("\x1b[" + colors[color.toLowerCase()]+"m")
         }
         else{
             console.error("Param must be a color type.")

@@ -50,6 +50,6 @@ Changing a color name to a color code for using as a logging parram
 > #### **Syntax**
 >     toColorCode(color)
 >> **Where:**
->> * color - a color name that is in a supporting [color list](../colorList.md)
+>> * color - a color name that is in a supporting [styles list](../styles.md)
 > #### **Output**
 > A color code that can be used in logging

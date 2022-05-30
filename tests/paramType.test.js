@@ -1,4 +1,5 @@
 const ParamType = require("../modules/paramType")
+console.log(ParamType)
 
 console.log(new ParamType("red"))
 
