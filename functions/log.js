@@ -6,5 +6,6 @@ module.exports = (text, ...theArgs)=>{
     theArgs.forEach(elem=>{
         params.push(ParamType(elem))
     })
+    
     console.log(text)
 }
