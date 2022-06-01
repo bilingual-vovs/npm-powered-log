@@ -51,4 +51,9 @@ module.exports = {
     boolean,
     array,
     object,
+    num: number,
+    str: string,
+    bool: boolean,
+    arr: array,
+    obj: object,
 }
