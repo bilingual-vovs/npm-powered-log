@@ -19,3 +19,7 @@ console.log(operations.valuesToUpperCase(testObj))
 
 console.log(operations.toColorCode('red'))
 console.log(operations.toColorCode("ReD"))
+
+console.log(operations.strMultiply("aaa", 3))
+
+console.log(operations.advancedTypeOf([11 ,22]))

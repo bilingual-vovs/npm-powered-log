@@ -53,3 +53,24 @@ Changing a color name to a color code for using as a logging parram
 >> * color - a color name that is in a supporting [styles list](../styles.md)
 > #### **Output**
 > A color code that can be used in logging
+
+### **`strMultiply()`**
+> #### **Action**
+Multipliing the given string
+> #### **Syntax**
+>     toColorCode(str, cof)
+>> **Where:**
+>> * str - string to multiply
+>> * cof - how many times multiply
+> #### **Output**
+> Multiplied string
+
+### **`advancedTypeOf()`**
+> #### **Action**
+Returning an advanced type of value, it is for finding diference, for example, between array and object.
+> #### **Syntax**
+>     advancedTypeOf(value)
+>> **Where:**
+>> * value - value for type determining
+> #### **Output**
+> Type of value *(type : string)*

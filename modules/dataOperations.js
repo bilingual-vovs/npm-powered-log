@@ -68,6 +68,22 @@ const operations = {
         else{
             console.error("Param must be a color type.")
         }
+    },
+    strMultiply(str, cof){
+        let strOut = ''
+        for(let i = 0; i<cof; i++){
+            strOut += str
+        }
+        return strOut
+    },
+    advancedTypeOf(value){
+        let type = typeof value
+
+        if(type == "object" && Array.isArray(value)){
+            type = "array"
+        }
+
+        return type
     }
 }
 module.exports = operations
