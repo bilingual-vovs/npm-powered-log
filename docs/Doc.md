@@ -18,6 +18,40 @@
 > #### **This func don't have output**  
 >  
 > **P.S -** you should use this function to write some messages in terminal or console and save them to directories, but we recomend to use another function in our packadge. You can find more at [doc.md](./docs/Doc.md#log)
+
+### **`warn`**
+> Our interpretation of **warn** function alows you to make your warn with some **styles** ([look at styles.md](./docs/styles.md)) and **set** many **writing directories**, defoutly warning withdrawing in yellow color, so you won't miss it. 
+> #### **Syntax**
+> 
+>     console.warn(yourText, ...theArgs)
+> 
+>> **Where** 
+>> * `yourText` - text to warn *(type : string)*
+>> * `theArgs`:
+>>   * **style** - one of styles in [style.md](./docs/styles.md) *(type : string)* *(you can add as many styles as you want, **isn't case insensitive**)*
+>>   * **dir** - every directory to write this warn text *(type : string)* *(you can add as many dirs as you want, **isn't case insensitive**)*
+> #### **This func don't have output**  
+>  
+
+### **`error` / `err`**
+> Our interpretation of **error** function alows you to withdraw error with some **styles** ([look at styles.md](./docs/styles.md)) and **set** many **writing directories**, defoultly withdrawing in red color, so you won't miss it. 
+> #### **Syntax**
+> 
+>     console.error(yourText, ...theArgs)
+> 
+> or
+> 
+>     console.err(yourText, ...theArgs)
+> 
+>> **Where** 
+>> * `yourText` - text for error *(type : string)*
+>> * `theArgs`:
+>>   * **style** - one of styles in [style.md](./docs/styles.md) *(type : string)* *(you can add as many styles as you want, **isn't case insensitive**)*
+>>   * **dir** - every directory to write this log text *(type : string)* *(you can add as many dirs as you want, **isn't case insensitive**)*
+> #### **This func don't have output**  
+>  
+
+
 ### **Styles** 
 > For every style in [styles.md](./styles.md) is a function with the same name as a style name, but in lower case 
 > #### **Syntax**
