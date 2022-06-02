@@ -51,6 +51,19 @@
 > #### **This func don't have output**  
 >  
 
+### **`count`**
+> **Count** logging a text with standart and adding number of times this text was logged by count
+> #### **Syntax**
+> 
+>     console.count(yourText, ...theArgs)
+> 
+>> **Where** 
+>> * `yourText` - text to log with count *(type : string)*
+>> * `theArgs`:
+>>   * **style** - one of styles in [style.md](./docs/styles.md) *(type : string)* *(you can add as many styles as you want, **isn't case insensitive**)*
+>>   * **dir** - every directory to write this log text *(type : string)* *(you can add as many dirs as you want, **isn't case insensitive**)*
+> #### **This func don't have output**  
+>  
 
 ### **Styles** 
 > For every style in [styles.md](./styles.md) is a function with the same name as a style name, but in lower case 
