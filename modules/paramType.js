@@ -1,5 +1,5 @@
 const fs = require('fs')
-let colors = JSON.parse(fs.readFileSync("./assets/colors.json", "utf-8", (err) => {
+let colors = JSON.parse(fs.readFileSync(__dirname+"/../assets/colors.json", "utf-8", (err) => {
     console.error(err);
 }))
 

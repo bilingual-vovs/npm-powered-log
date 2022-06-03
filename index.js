@@ -6,8 +6,8 @@ const warn = require("./functions/warn")
 const error = require("./functions/error")
 const count = require("./functions/count")
 
-fs.writeFileSync("./data/dirUsage.json", '[]', 'utf-8')
-fs.writeFileSync("./data/counters.json", '{}', 'utf-8')
+fs.writeFileSync(__dirname+"/data/dirUsage.json", '[]', 'utf-8')
+fs.writeFileSync(__dirname+"/data/counters.json", '{}', 'utf-8')
 
 let console = {
     log,
