@@ -2,7 +2,7 @@ const fs = require('fs');
 const log = require("./log")
 
 module.exports = (text, ...theArgs)=>{
-    let counters = require("../data/counters.json")
+    let counters = require(__dirname+"/../data/counters.json")
     if (text in counters){
         counters[text].count++
     }
@@ -12,5 +12,5 @@ module.exports = (text, ...theArgs)=>{
         }
     }
     log(counters[text].count + ". " + text, ...theArgs)
-    fs.writeFileSync("./data/counters.json", JSON.stringify(counters), "utf-8")
+    fs.writeFileSync(__dirname+"/../data/counters.json", JSON.stringify(counters), "utf-8")
 }
