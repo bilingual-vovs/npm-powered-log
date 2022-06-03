@@ -1,0 +1,22 @@
+{
+  "name": "npm-powered-log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilingual-vovs/npm-powered-log.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilingual-vovs/npm-powered-log/issues"
+  },
+  "homepage": "https://github.com/bilingual-vovs/npm-powered-log#readme",
+  "dependencies": {
+    "powered-log": "^1.2.2"
+  }
+}
