@@ -169,7 +169,7 @@ To visualisate data in diferent types we have own custum and colored methods, so
 > #### **This func don't have output**  
 
 
-### **`object`/`str`**
+### **`object`/`obj`**
 > Function that logs colored object, logging decorated object, not very usefull.
 > #### **Syntax**
 > 
