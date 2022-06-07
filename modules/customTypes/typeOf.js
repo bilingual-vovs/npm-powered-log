@@ -14,6 +14,7 @@ module.exports = (value)=>{
                 type = "style"
             }
         }
+        if(value.length == 2 && value[0] == "-") type = "flag"
 
         if (value.indexOf('/') != -1) type = "dir"
         break;

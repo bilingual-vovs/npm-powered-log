@@ -75,15 +75,6 @@ const operations = {
             strOut += str
         }
         return strOut
-    },
-    advancedTypeOf(value){
-        let type = typeof value
-
-        if(type == "object" && Array.isArray(value)){
-            type = "array"
-        }
-
-        return type
     }
 }
 module.exports = operations

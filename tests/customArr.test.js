@@ -1,0 +1,5 @@
+const CustomBool = require("../modules/customTypes/array")
+const test = new CustomBool([22, 3, 'dd', true, ["test", 2]])
+test.setFlag("-m")
+console.log(test)
+console.log(test.coloredString)
