@@ -1,4 +1,4 @@
-const ParamTypes = require('./paramType')
+const typeOf = require('./customTypes/typeOf')
 const colors = require('../assets/colors.json')
 
 const operations = {
@@ -61,12 +61,11 @@ const operations = {
         return newObject
     },
     toColorCode(color){
-        let type = new ParamTypes(color)
-        if (type.isColor){
+        if (typeOf(color) == "style"){
             return ("\x1b[" + colors[color.toLowerCase()]+"m")
         }
         else{
-            console.error("Param must be a color type.")
+            console.error("Param must be a style type.")
         }
     },
     strMultiply(str, cof){
@@ -75,15 +74,6 @@ const operations = {
             strOut += str
         }
         return strOut
-    },
-    advancedTypeOf(value){
-        let type = typeof value
-
-        if(type == "object" && Array.isArray(value)){
-            type = "array"
-        }
-
-        return type
     }
 }
 module.exports = operations

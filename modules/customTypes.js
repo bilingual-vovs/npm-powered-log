@@ -1,31 +1,18 @@
-const fs = require('fs');
-const ParamType = require("../modules/paramType")
-
-class Dir{
-    constructor(str){
-        if(typeof str == "string"){
-            if(new ParamType(str).isDir){
-                this.dir = str
-            }
-            else{
-                console.error("It must be a directory")
-            }
-        }
-        else{
-            console.error("Must be a string type")
-        }
-    }
+const types = {
+    number: require("./customTypes/number"),
+    string: require("./customTypes/string"),
+    boolean: require("./customTypes/boolean"),
+    array: require("./customTypes/array"),
+    object: require("./customTypes/object"),
+    style: require("./customTypes/style"),
 }
-
-class Color{
-    constructor(str){
-        if(new ParamType(str).isColor){
-            this.color = str
-        }
-    }
-}
+const typeOf = require("./customTypes/typeOf")
 
 module.exports = {
-    Dir,
-    Color,
+    customType(value){
+        return new types[typeOf(value)](value)
+    }
+}
+for(let key in types){
+    module.exports[key] = types[key]
 }
