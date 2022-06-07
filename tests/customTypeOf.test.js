@@ -1,0 +1,11 @@
+const typeOf = require("../modules/customTypes/typeOf")
+
+console.log(typeOf("aa"))
+console.log(typeOf({aaaaaa:"vvv"}))
+console.log(typeOf(["dddd",33]))
+console.log(typeOf(22))
+console.log(typeOf(true))
+console.log(typeOf(Symbol("Test")))
+console.log(typeOf("Red"))
+console.log(typeOf("./vovs.test/js"))
+console.log(typeOf((NaN)))
