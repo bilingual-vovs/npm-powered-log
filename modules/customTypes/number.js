@@ -1,9 +1,11 @@
 const typeOf = require("./typeOf")
-class CustomNum {
+class CustomNumber {
     constructor(input){
         this.input = input
         this.data = Number(input)
         this.verification()
+
+        this.type = "number"
     }
     verification(){
         if(typeOf(this.data) == 'number'){
@@ -21,4 +23,4 @@ class CustomNum {
     }
 }
 
-module.exports = CustomNum
+module.exports = CustomNumber

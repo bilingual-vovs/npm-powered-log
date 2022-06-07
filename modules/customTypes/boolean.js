@@ -5,6 +5,8 @@ class CustomBoolean{
         this.input = input
         this.data = Boolean(input)
         this.verification()
+
+        this.type = "boolean"
     }
     verification(){
         if(typeOf(this.data) == 'boolean'){

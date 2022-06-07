@@ -15,6 +15,8 @@ class CustomObject {
 
         this.tabIndex = 0
         this.tab = "    "
+
+        this.type = "object"
     }
     verification(){
         if(typeOf(this.data) == 'object'){

@@ -20,6 +20,9 @@ module.exports = (value)=>{
         break;
         case "object":
             if(Array.isArray(value)) type = "array"
+            if(value.constructor.name == "CustomArray" || value.constructor.name == "CustomString" ||
+            value.constructor.name == "CustomNumber" || value.constructor.name == "CustomStyle" || 
+            value.constructor.name == "CustomObject" || value.constructor.name == "CustomBoolean") type = value.type
         break;
         case "number":
             if(isNaN(value)) type = "NaN"

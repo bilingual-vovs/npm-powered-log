@@ -5,6 +5,8 @@ class CustomString{
         this.input = input
         this.data = String(input)
         this.verification()
+
+        this.type = "string"
     }
     verification(){
         if(typeOf(this.data) == 'string'){

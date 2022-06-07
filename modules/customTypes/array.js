@@ -10,6 +10,8 @@ class CustomArray {
         this.input = input
         this.data = input
         this.verification()
+
+        this.type = "array"
     }
     verification(){
         if(typeOf(this.data) == 'array'){
