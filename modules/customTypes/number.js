@@ -2,13 +2,14 @@ const typeOf = require("./typeOf")
 class CustomNumber {
     constructor(input){
         this.input = input
+        this.isCustomType = true
         this.data = Number(input)
         this.verification()
 
         this.type = "number"
     }
     verification(){
-        if(typeOf(this.data) == 'number'){
+        if(typeof this.data== 'number'){
             this.value = this.data
             return true
         }
