@@ -1,10 +1,11 @@
 const log = require("./functions/log")
 const fs = require('fs')
 const colors = require('./assets/colors.json')
-const stringing = require("./modules/coloredString")
 const warn = require("./functions/warn")
 const error = require("./functions/error")
 const count = require("./functions/count")
+
+const customTypes = require("./modules/customTypes")
 
 fs.writeFileSync(__dirname+"/data/dirUsage.json", '[]', 'utf-8')
 fs.writeFileSync(__dirname+"/data/counters.json", '{}', 'utf-8')
@@ -23,10 +24,16 @@ for(let color in colors){
     }
 }
 
-for(let func in stringing){
-    console[func] = (text, ...theArgs)=>{
-        log(stringing[func](text), ...theArgs)
+for(let func in customTypes){
+    if (func != "customType"){
+        console[func] = (text, ...theArgs)=>{
+            log(new customTypes[func](text).coloredString, ...theArgs)
+        }
     }
+    
+}
+console.value = (text, ...theArgs)=>{
+    log(customTypes.customType(text).coloredString, ...theArgs)
 }
 
 

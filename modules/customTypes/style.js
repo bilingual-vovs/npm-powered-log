@@ -1,9 +1,10 @@
 const typeOf = require("./typeOf")
 const {toColorCode} = require('../dataOperations')
 
-class CustomObject {
+class CustomStyle {
     constructor(input){
         this.input = input
+        this.isCustomType = true
         this.data = input
         this.verification()
         this.colorCode = toColorCode(this.value)
@@ -27,4 +28,4 @@ class CustomObject {
     }
 }
 
-module.exports = CustomObject
+module.exports = CustomStyle

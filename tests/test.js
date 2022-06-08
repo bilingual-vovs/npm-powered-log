@@ -4,3 +4,5 @@ console.log(typeof test)
 
 let test2 = String(Symbol("ss"))
 console.log(test2)
+
+console.log(Object(function vovs(){console.log("test")}))

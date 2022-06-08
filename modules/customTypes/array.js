@@ -1,13 +1,19 @@
+const { strMultiply } = require("../dataOperations");
 const typeOf = require("./typeOf")
 const customTypes = {
     number: require('./number'),
     string: require('./string'),
     boolean: require('./boolean'),
-    object: require('./object')
+    dir: require('./dir'),
+    style: require('./style'),
+    NaN: require('./NaN')
 }
+
 class CustomArray {
+    additionalTabIndex = 0;
     constructor(input){
         this.input = input
+        this.isCustomType = true
         this.data = input
         this.verification()
 
@@ -25,15 +31,24 @@ class CustomArray {
         }
     }
     get coloredString(){
-        let str = "\x1b[35m[\x1b[0m "
+        let str = "\x1b[35m[\x1b[0m"
 
         this.value.forEach((elem, i) => {
             switch(typeOf(elem)){
                 case "array":
                     str += new CustomArray(elem).coloredString + (i+1 < this.value.length ? ", ": "")
                 break;
+                case "undefined":
+                    str += "\x1b[2m" + undefined + "\x1b[0m," 
+                break;
+                case "object":
+                    let Obj = require('./object')
+                    let obj = new Obj(elem)
+                    obj.additionalTabIndex = this.additionalTabIndex
+                    str += obj.coloredString + (i+1 < this.value.length ? ", \n"+strMultiply("    ", this.additionalTabIndex): "")
+                break;
                 default:
-                str += new customTypes[typeOf(elem)](elem).coloredString + (i+1 < this.value.length ? ", ": "")
+                str += (customTypes[typeOf(elem)] != undefined ? new customTypes[typeOf(elem)](elem).coloredString: elem) + (i+1 < this.value.length ? ", ": "")
             }
             
         });
@@ -42,9 +57,5 @@ class CustomArray {
 
         return str
     }
-    setFlag(flg){
-        this[flg] = true
-    }
 }
-
 module.exports = CustomArray

@@ -3,13 +3,14 @@ const typeOf = require("./typeOf")
 class CustomBoolean{
     constructor(input){
         this.input = input
+        this.isCustomType = true
         this.data = Boolean(input)
         this.verification()
 
         this.type = "boolean"
     }
     verification(){
-        if(typeOf(this.data) == 'boolean'){
+        if(typeof this.data == 'boolean'){
             this.value = this.data
             return true
         }

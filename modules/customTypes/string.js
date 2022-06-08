@@ -3,13 +3,14 @@ const typeOf = require("./typeOf")
 class CustomString{
     constructor(input){
         this.input = input
+        this.isCustomType = true
         this.data = String(input)
         this.verification()
 
         this.type = "string"
     }
     verification(){
-        if(typeOf(this.data) == 'string'){
+        if(typeof this.data == 'string'){
             this.value = this.data
             return true
         }
