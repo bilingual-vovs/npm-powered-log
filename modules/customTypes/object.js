@@ -4,13 +4,13 @@ const customTypes = {
     number: require('./number'),
     string: require('./string'),
     boolean: require('./boolean'),
-    array: require('./array'),
     dir: require('./dir'),
     style: require('./style'),
     NaN: require('./NaN'),
     function: require('./function'),
 }
 
+console.log(customTypes.array)
 class CustomObject {
     constructor(input){
         this.input = input
@@ -52,12 +52,17 @@ class CustomObject {
                 dir.additionalTabIndex = this.addTabIndx + 1
                 str += this.tabStr + `\x1b[34m${key}\x1b[0m` + ": \n" + dir.coloredString + "," + "\n"
             }
+            else if (typeOf(this.value[key]) == "array"){
+                let Arr = require('./array')
+                let arr = new Arr(this.value[key])
+                arr.additionalTabIndex = this.tabIndex
+                str += this.tabStr + `\x1b[34m${key}\x1b[0m` + ": " + arr.coloredString + "," + "\n"
+            }
             else if (this.value[key] == undefined){
                 str += this.tabStr + `\x1b[34m${key}\x1b[0m` + ": \x1b[2m" + undefined + "\x1b[0m," + "\n"
             }
             else{
-                console.log(this.value[key])
-                str += this.tabStr + `\x1b[34m${key}\x1b[0m` + ": " + (customTypes[typeOf(this.value[key])] != undefined ? new customTypes[typeOf(this.value[key])](this.value[key]).coloredString: "\x1b[36m" + String(this.value[key]).replace(" ", "").replace("\n", " ") + "\x1b[0m") + "," + "\n"
+                str += this.tabStr + `\x1b[34m${key}\x1b[0m` + ": " + (customTypes[typeOf(this.value[key])] != undefined ? new customTypes[typeOf(this.value[key])](this.value[key]).coloredString: "\x1b[36m" + String(this.value[key]) + "\x1b[0m") + "," + "\n"
             }
         }
 
