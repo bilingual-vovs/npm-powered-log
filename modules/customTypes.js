@@ -8,6 +8,7 @@ const types = {
     dir: require("./customTypes/dir"),
     function: require("./customTypes/function"),
     NaN: require("./customTypes/NaN"),
+    preset: require("./customTypes/preset"),
 }
 const typeOf = require("./customTypes/typeOf")
 

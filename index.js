@@ -4,8 +4,12 @@ const colors = require('./assets/colors.json')
 const warn = require("./functions/warn")
 const error = require("./functions/error")
 const count = require("./functions/count")
+const initialPreset = require("./assets/presets.json")
+
+fs.writeFileSync("./data/userPresets.json", JSON.stringify(initialPreset), "UTF-8") 
 
 const customTypes = require("./modules/customTypes")
+const { json } = require("express/lib/response")
 
 fs.writeFileSync(__dirname+"/data/dirUsage.json", '[]', 'utf-8')
 fs.writeFileSync(__dirname+"/data/counters.json", '{}', 'utf-8')

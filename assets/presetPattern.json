@@ -1,0 +1,33 @@
+{
+    "style": {
+        "reset" : false,
+        "bright" : false,
+        "dim" : false,
+        "underscore" : false,
+        "blink" : false,
+        "reverse" : false,
+        "hidden" : false,
+
+        "black" : false,
+        "red" : false,
+        "green" : false,
+        "yellow" : false,
+        "blue" : false,
+        "magenta" : false,
+        "cyan" : false,
+        "white" : false,
+
+        "bgblack" : false,
+        "bgred" : false,
+        "bggreen" : false,
+        "bgyellow" : false,
+        "bgblue" : false,
+        "bgmagenta" : false,
+        "bgCyan" : false,
+        "bgwhite" : false
+    },
+    "dirs":[],
+    "prefix": [],
+    "postfix": [],
+    "flags": []
+}

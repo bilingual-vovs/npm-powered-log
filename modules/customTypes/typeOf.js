@@ -1,4 +1,5 @@
 const styles = require("../../assets/colors.json")
+const userPresets = require("../../data/userPresets.json")
 
 module.exports = (value)=>{
     const typeOf = typeof value
@@ -17,9 +18,14 @@ module.exports = (value)=>{
             if(value.length == 2 && value[0] == "-") type = "flag"
     
             if (value.indexOf('/') != -1) type = "dir"
+            for(let preset in userPresets){
+                if(preset == value
+                    ){
+                    type = "preset"
+                }
+            }
             break;
             case "object":
-                console.log(value)
                 if(Array.isArray(value)) type = "array"
                 if(value.constructor.name == true) type = value.type
             break;
