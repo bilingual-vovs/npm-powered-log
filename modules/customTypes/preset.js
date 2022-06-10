@@ -48,15 +48,7 @@ class Preset {
 
 
     get coloredString(){
-        let str = ''
-        this.prefix.forEach(elem=>{
-            for (let key in elem.style){
-                if (elem.style[key]){
-                    str += new Style(key).colorCode
-                }
-            }
-            str += elem.prefix + "\x1b[0m"
-        })
+        let str = this.coloredPrefix
 
         for (let key in this.style){
             if (this.style[key]){
@@ -65,42 +57,35 @@ class Preset {
         }
         str += "|SomeText|\x1b[0m"
 
-        this.postfix.forEach(elem=>{
-            for (let key in elem.style){
-                if (elem.style[key]){
-                    str += new Style(key).colorCode
-                }
-            }
-            str += elem.postfix + "\x1b[0m"
-        })
+        str += this.coloredPostfix
         return str
     }
 
 
     get coloredPrefix (){
         let str = ''
-        this.prefix.forEach(elem=>{
-            for (let key in elem.style){
-                if (elem.style[key]){
+        for(let prefix in this.prefix){
+            for (let key in this.prefix[prefix]){
+                if (this.prefix[prefix][key]){
                     str += new Style(key).colorCode
                 }
             }
-            str += elem.prefix + "\x1b[0m"
-        })
+            str += prefix + "\x1b[0m"
+        }
         return str
     }
 
 
     get coloredPostfix (){
         let str = ''
-        this.postfix.forEach(elem=>{
-            for (let key in elem.style){
-                if (elem.style[key]){
+        for(let postfix in this.postfix){
+            for (let key in this.postfix[postfix]){
+                if (this.postfix[postfix][key]){
                     str += new Style(key).colorCode
                 }
             }
-            str += elem.postfix + "\x1b[0m"
-        })
+            str += postfix + "\x1b[0m"
+        }
         return str
     }
 
@@ -121,37 +106,6 @@ class Preset {
             this.style[key] = this.style[key] || preset.style[key]
         }
         this.dirs = this.dirs.concat(preset.dirs)
-        this.postfix = this.postfix.concat(preset.postfix)
-        this.prefix = this.prefix.concat(preset.prefix)
-    }
-    addPrefix(pref, ...theArgs){
-        let prefixObj = {
-            prefix: pref,
-            style: presetPattern.style
-        }
-        theArgs.forEach(elem=>{
-            if(typeOf(elem) == "style"){
-                prefixObj.style[elem] = true
-            }
-        })
-        
-        this.prefix.push(prefixObj)
-    }
-    addPrefix(pref, ...theArgs){
-        let prefixObj = {
-            prefix: pref,
-            style: presetPattern.style
-        }
-        theArgs.forEach(elem=>{
-            if(typeOf(elem) == "style"){
-                prefixObj.style[elem] = true
-            }
-        })
-        
-        this.prefix.push(prefixObj)
-        return this.prefix.length - 1
-    }
-    deletePrefix(pref){
         
     }
 }

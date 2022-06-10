@@ -27,7 +27,7 @@
         "bgwhite" : false
     },
     "dirs":[],
-    "prefix": [],
-    "postfix": [],
+    "prefix": {},
+    "postfix": {},
     "flags": []
 }

@@ -21,7 +21,7 @@ class CustomBoolean{
         }
     }
     get coloredString(){
-        return "\x1b[31m" + String(this.value) + "\x1b[0m"
+        return `\x1b[3${this.value ? "2":"1"}m` + String(this.value) + "\x1b[0m"
     }
 }
 

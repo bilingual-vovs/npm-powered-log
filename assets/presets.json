@@ -28,9 +28,8 @@
             "bgwhite" : false
         },
         "dirs":[],
-        "prefix": [{
-            "prefix": "error",
-            "style": {
+        "prefix": {
+            "error": {
                 "reset" : false,
                 "bright" : false,
                 "dim" : false,
@@ -56,11 +55,9 @@
                 "bgmagenta" : false,
                 "bgCyan" : false,
                 "bgwhite" : false
-            }
-        },
-        {
-            "prefix": ": ",
-            "style": {
+            },
+            ": " : {
+            
                 "reset" : false,
                 "bright" : false,
                 "dim" : false,
@@ -86,9 +83,10 @@
                 "bgmagenta" : false,
                 "bgCyan" : false,
                 "bgwhite" : false
+            
             }
-        }],
-        "postfix": [],
+        },
+        "postfix": {},
         "flags": []
     }
 }
