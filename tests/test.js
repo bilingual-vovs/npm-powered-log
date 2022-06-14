@@ -1,8 +1,11 @@
-let test = Number([22])
-console.log(test)
-console.log(typeof test)
 
-let test2 = String(Symbol("ss"))
-console.log(test2)
 
-console.log(Object(function vovs(){console.log("test")}))
+let a = {
+    ab (){
+        console.log("test")
+        console.log(this.ab.ac)
+    }
+}
+a.ab.ac = 22
+console.log(a.ab)
+a.ab()
